@@ -1,0 +1,19 @@
+.header-profile {
+  padding-top: 120px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  background-color: #d0e1ed;
+  background-image: url("https://www.transparenttextures.com/patterns/pineapple-cut.png");
+}
+
+.header-name {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
