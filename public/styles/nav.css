@@ -8,6 +8,7 @@ nav {
     padding: 1.5em;
     justify-content: space-between;
     z-index: 1;
+    position: fixed;
 }
 
 nav > span {
@@ -25,4 +26,8 @@ nav > span {
 
 .fa-solid {
   color: #c50101
+}
+
+.bold {
+  font-weight: bold;
 }
