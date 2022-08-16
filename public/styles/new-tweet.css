@@ -1,0 +1,42 @@
+.label {
+  font-weight: bold;
+  text-align: left;
+}
+
+#tweet-text {
+  width: 100%;
+  background: transparent;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 4px;
+  font-size: 90%;
+  padding-bottom: 0px;
+  padding-top: 5px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-footer > button {
+  background-color: #4152a0;
+  color: #FFFFFF;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+}
+
+.counter {
+  margin-right: 10px;
+  margin-left: 10px;
+}
