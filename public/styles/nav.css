@@ -25,7 +25,8 @@ nav > span {
 }
 
 .fa-solid {
-  color: #c50101
+  color: #c50101;
+  padding-top: 2px;
 }
 
 .bold {

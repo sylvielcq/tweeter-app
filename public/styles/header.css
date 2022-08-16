@@ -1,11 +1,10 @@
 .header-profile {
-  padding-top: 120px;
-  height: 520px;
+  padding-top: 90px;
+  height: 490px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: aliceblue;
   background-color: #d0e1ed;
   background-image: url("https://www.transparenttextures.com/patterns/pineapple-cut.png");
 }
