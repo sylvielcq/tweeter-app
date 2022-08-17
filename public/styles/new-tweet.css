@@ -36,6 +36,10 @@
   border-right-width: 0px;
 }
 
+.counter.invalid {
+  color: #FF0000;
+}
+
 .counter {
   margin-right: 10px;
   margin-left: 10px;
