@@ -1,4 +1,4 @@
-$(() => {
+$(document).ready(() => {
 
   $('#tweet-text').on('input', charCounter);
 
