@@ -1,13 +1,13 @@
 $(() => {
 
-  $('#tweet-text').on('input', counter);
+  $('#tweet-text').on('input', charCounter);
 
 });
 
 
 // Function that updates the characters counter on the New Tweet form.
 // Takes in no argument. Returns a number.
-const counter = function() {
+const charCounter = function() {
 
   const maxChars = 140;
   let $tweetLength = $(this).val().length;
