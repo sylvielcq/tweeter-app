@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="styles/header.css" type="text/css" />
     <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="styles/all-tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -42,18 +43,19 @@
     <!-- Header-->
     <header class="header-profile">
       <div>
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div class="header-name">
-          <h2><span class="bold">Sylvie</span> Lacoque</h2>
+        <h2><span class="bold">Sylvie</span> Lacoque</h2>
       </div>
   </header>
 
-    <!-- Page-specific (main) content here -->
+    <!-- MAIN CONTENT -->
     <main class="container">
+      
+      <!-- New Tweet section -->
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
           <div class="label">
             <label for="tweet-text">What are you humming about?</label>
@@ -64,6 +66,33 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </footer>
         </form>
+      </section>
+
+      <!-- All tweets section -->
+      <section class="all-tweets">
+
+        <article class="tweet">
+          <header>
+            <div class="user-name">
+              <img src="/images/profile-hex.png"> 
+              <span>Newton</span>
+            </div>
+            <div class="user-handle">
+              <span>@SirIsaac</span>
+            </div>
+          </header>
+          <p id="tweet-content">If I have seen further it is by standing on the shoulders of giants</p>
+          <div id="separator"></div>
+          <footer>
+            <span>10 days ago</span>
+            <div class="icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+
       </section>
     </main>
     <script src="/scripts/composer-char-counter.js"></script>
