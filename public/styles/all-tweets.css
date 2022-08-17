@@ -28,16 +28,17 @@ article.tweet header .user-handle {
 }
 
 article.tweet header img {
-  max-width: 20%;
+  max-width: 2em;
+  margin-right: 10px
 }
 
-#tweet-content {
+.tweet-content {
   margin-left: 25px;
   margin-right: 25px;
   margin-top: 20px;
 }
 
-#separator {
+.separator {
   border-bottom: 4px solid #72706b;
   padding-top: 30px;
   margin-left: 10px;
