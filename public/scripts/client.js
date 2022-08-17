@@ -27,6 +27,20 @@ const data = [
 
 $(document).ready(() => {
 
+  $('.new-tweet').submit((event) => {
+
+    event.preventDefault();
+
+    const $userInput = $('#tweet-text').serialize()
+
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: $userInput,
+    })
+    console.log($userInput)
+  })
+
   // Function that appends tweets to the .all-tweets section.
   // Takes in an array of tweet objects.
   const renderTweets = function(arr) {
