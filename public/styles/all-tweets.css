@@ -15,7 +15,7 @@ article.tweet header {
   padding: 20px;
 }
 
-article.tweet header .user-name {
+article.tweet header .user-photo-name {
   display: flex;
   align-items: center;
 }
