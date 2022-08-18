@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="styles/header.css" type="text/css" />
     <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="styles/all-tweets.css" type="text/css" />
+    <link rel="stylesheet" href="styles/scroll-up.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -33,7 +34,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <div class="nav-new-tweet">
+      <div class="nav-new-tweet active">
         <p><span class="bold">Write</span> a new tweet</p>
         <button type="button" id="collapsible"><i class="fa-solid fa-angles-down"></i></button>
       </div>
@@ -72,12 +73,18 @@
       <section class="all-tweets">
       </section>
       
+      <!-- Button to scroll back up -->
+      <div class="scroll-up">
+          <button type="button" id="scroll-up-btn"><i class="fa-solid fa-angles-up"></i></button>
+      </div>
+
     </main>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script src="/scripts/composer-char-counter.js"></script>
     <script src="/scripts/collapsible.js"></script>
+    <script src="/scripts/composer.js"></script>
   
   </body>
 </html>
