@@ -1,22 +1,34 @@
 $(document).ready(() => {
 
-  // Event Listener on the new-tweet submit button: prevents the default behavior.
-  // The input is then serialized into a query string, and sent to the /tweets server page.
-  $('.new-tweet').submit((event) => {
+  // Function called when a new tweet is submitted.
+  // The user input is checked, then - if valid - serialized into a query string, and sent to the /tweets server page.
+  const submitNewTweet = function(event) {
 
     event.preventDefault();
 
-    const $userInput = $('#tweet-text').serialize()
+    if ($(this).find('#tweet-text').val() === '') {     // If the tweet is empty
+      return alert('Error: tweet has no content.');
+    }
 
-    $.ajax({
+    if ($(this).find('.invalid')[0]) {                  // If the tweet is too long (= ".invalid" class applied on tweets over 140 chars by our chatCounter function)
+      return alert('Error: tweet is too long.')     
+    }
+
+    $.ajax({                                            // Else
       url: '/tweets',
       method: 'POST',
-      data: $userInput,
+      data: $(this).serialize()
+    })
+    .then((result) => {
+      loadTweets();
+      $('#tweet-text').val('');                         // Clears the new-tweet form
+      $(this).find('.counter').text(140);               // Char counter back to 140
     })
     .catch((error) => {
-      console.log('new-tweet submit ajax error: ', error);
+      console.log('Ajax POST error: ', error);
     })
-  })
+  };
+
 
   // Function that fetches tweets from the http://localhost:8080/tweets page,
   // and receives an array of tweets as JSON,
@@ -35,23 +47,26 @@ $(document).ready(() => {
     })
   };
 
-  loadTweets();
 
-
-  // Function that appends tweets to the .all-tweets section.
+  // Function that prepends tweets to the .all-tweets section.
   // Takes in an array of tweet objects.
   const renderTweets = function(arr) {
 
     const $allTweets = $('.all-tweets');
-    let $initialTweets = '';
+    $allTweets.empty();         // Empties the .all-tweets section each time the function is called, to avoid duplicates.
 
-    for (let obj of arr) {
-      $initialTweets += createTweetElement(obj);
-    }
-
-    $allTweets.append($initialTweets);
+    arr.forEach((obj) => {
+      $allTweets.prepend(createTweetElement(obj));
+    });
   };
 
+  // Function that escapes text in order to prevent an XSS attack.
+  // Takes in a string. Returns an escaped string.
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   // Function that creates a tweet.
   // Takes in a tweet object. Returns a tweet <article> element.
@@ -74,7 +89,7 @@ $(document).ready(() => {
             <span>${handle}</span>
           </div>
         </header>
-        <p class="tweet-content">${content}</p>
+        <p class="tweet-content">${escape(content)}</p>
         <div class="separator"></div>
         <footer>
           <span>${creationDate}</span>
@@ -89,5 +104,12 @@ $(document).ready(() => {
 
     return $tweet;
   };
+
+  // Loads tweets history on page load.
+  loadTweets();
+
+  // Event Listener on the New Tweet submit button.
+  $('form').submit(submitNewTweet)
+  
 
 });
