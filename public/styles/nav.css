@@ -24,11 +24,22 @@ nav > span {
   margin-top: 0.8em;
 }
 
-.nav-new-tweet i {
-  color: #c50101;
-  padding-top: 2px;
-}
-
 .bold {
   font-weight: bold;
+}
+
+.nav-new-tweet button {
+  color: #c50101;
+  padding-top: 2px;
+  background: none;
+  border: none;
+}
+
+.nav-new-tweet button:hover {
+  animation: pulse 1s infinite ease-in-out alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(0.8); }
+  to { transform: scale(1.2); }
 }
