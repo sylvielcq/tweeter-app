@@ -6,12 +6,23 @@ $(document).ready(() => {
 
     event.preventDefault();
 
+    // Exclamation icon for error message
+    const errorIcon = `<i class="fa-solid fa-triangle-exclamation"></i>`;
+    
+    // Hides any prexisting error messages
+    $('#error').text('');
+
+
     if ($(this).find('#tweet-text').val() === '') {     // If the tweet is empty
-      return alert('Error: tweet has no content.');
+      $('#error').html(`${errorIcon} Content required.`);
+      $('#error').slideDown();
+      return;
     }
 
     if ($(this).find('.invalid')[0]) {                  // If the tweet is too long (= ".invalid" class applied on tweets over 140 chars by our chatCounter function)
-      return alert('Error: tweet is too long.')     
+      $('#error').html(`${errorIcon} 140 characters maximum.`);
+      $('#error').slideDown();
+      return;
     }
 
     $.ajax({                                            // Else
