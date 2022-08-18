@@ -20,6 +20,12 @@ section.new-tweet {
   padding-top: 5px;
 }
 
+#error {
+  font-size: medium;
+  font-weight: bold;
+  color: #FF0000;
+}
+
 .form-footer {
   display: flex;
   justify-content: space-between;
