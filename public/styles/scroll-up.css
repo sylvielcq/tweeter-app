@@ -1,0 +1,24 @@
+.scroll-up {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+
+#scroll-up-btn {
+  background: #FF0000;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border-color: transparent;
+  color: #FFFFFF;
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+
+#scroll-up-btn.active {
+  opacity: 1;
+}
+
+#scroll-up-btn:hover {
+  background-color: #fdc083;
+}
