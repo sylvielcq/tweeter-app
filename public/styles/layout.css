@@ -53,6 +53,9 @@ body .bold {
   nav {
     background-color: #1d3557;
   }
+  nav .tweeter {
+    text-shadow: 2px 2px 0px #457b9d;
+  }
   header.header-profile {
     border-radius: 20px;
     width: 40%;

@@ -27,7 +27,6 @@ nav .tweeter {
   font-family: "Bungee", sans-serif;
   font-size: 2em;
   margin-top: 0.3em;
-  text-shadow: 2px 2px 8px #457b9d;
 }
 nav .nav-new-tweet.active {
   opacity: 1;
@@ -36,7 +35,6 @@ nav .nav-new-tweet.active {
   align-items: center;
   margin-top: 0.8em;
   padding-top: 10px;
-  text-shadow: 2px 2px 8px #457b9d;
 }
 nav .nav-new-tweet {
   opacity: 0;
@@ -48,7 +46,6 @@ nav .nav-new-tweet {
 }
 nav .nav-new-tweet button {
   color: #e63946;
-  text-shadow: 1px 1px 6px #457b9d;
   padding-top: 2px;
   background: none;
   border: none;
