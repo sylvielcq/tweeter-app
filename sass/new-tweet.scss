@@ -7,12 +7,13 @@
 
 
 section.new-tweet {
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 50px;
 
   .label {
     font-weight: bold;
     text-align: left;
+    padding-bottom: 10px;
   }
 
   #tweet-text {
@@ -55,6 +56,10 @@ section.new-tweet {
       border-bottom-width: 0px;
       border-right-width: 0px;
       cursor: pointer;
+    }
+
+    button:hover {
+      box-shadow: 3px 3px 0 0 $box-shadow-color;
     }
 
     /* When tweet is too long. */

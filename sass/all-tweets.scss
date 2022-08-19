@@ -9,7 +9,7 @@
 article {
   border: 4px solid $border-color;
   border-radius: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   
   header {
     display: flex;
@@ -38,12 +38,12 @@ article {
   .tweet-content {
     margin-left: 25px;
     margin-right: 25px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   .separator {
     border-bottom: 4px solid $separator-color;
-    padding-top: 30px;
+    padding-top: 25px;
     margin-left: 10px;
     margin-right: 10px;
   }

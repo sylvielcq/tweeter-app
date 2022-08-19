@@ -20,29 +20,34 @@ nav {
     font-family: $secondary-font;
     font-size: 2em;
     margin-top: 0.3em;
+    text-shadow: 2px 2px 8px #457b9d;
   }
 
   /* (Default) '.active' class added when user is at the top of the page, or scrolling up */
   /* (cf. composer.js script file) */
   .nav-new-tweet.active {
+    opacity: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 0.8em;
-    opacity: 1;
+    padding-top: 10px;
+    text-shadow: 2px 2px 8px #457b9d;
   }
 
   /*  When user is scrolling down  */
   .nav-new-tweet {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 0.8em;
     transition: 0.5s all ease;
-    opacity: 0;
+
 
     button {
       color: $nav-btn-color;
+      text-shadow: 1px 1px 6px #457b9d;
       padding-top: 2px;
       background: none;
       border: none;
