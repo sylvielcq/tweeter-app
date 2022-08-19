@@ -30,14 +30,14 @@ $(document).ready(() => {
       method: 'POST',
       data: $(this).serialize()
     })
-    .then((result) => {
-      loadTweets();
-      $('#tweet-text').val('');                         // Clears the new-tweet form
-      $(this).find('.counter').text(140);               // Char counter back to 140
-    })
-    .catch((error) => {
-      console.log('Ajax POST error: ', error);
-    })
+      .then(() => {
+        loadTweets();
+        $('#tweet-text').val('');                         // Clears the new-tweet form
+        $(this).find('.counter').text(140);               // Char counter back to 140
+      })
+      .catch((error) => {
+        console.log('Ajax POST error: ', error);
+      });
   };
 
 
@@ -50,12 +50,12 @@ $(document).ready(() => {
       url: '/tweets',
       method: 'GET',
     })
-    .then((result) => {
-      renderTweets(result);
-    })
-    .catch((error) => {
-      console.log('loadTweets error: ', error);
-    })
+      .then((result) => {
+        renderTweets(result);
+      })
+      .catch((error) => {
+        console.log('loadTweets error: ', error);
+      });
   };
 
 
@@ -73,7 +73,7 @@ $(document).ready(() => {
 
   // Function that escapes text in order to prevent an XSS attack.
   // Takes in a string. Returns an escaped string.
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -111,7 +111,7 @@ $(document).ready(() => {
           </div>
         </footer>
       </article>
-    `
+    `;
 
     return $tweet;
   };
@@ -120,7 +120,7 @@ $(document).ready(() => {
   loadTweets();
 
   // Event Listener on the New Tweet submit button.
-  $('form').submit(submitNewTweet)
+  $('form').submit(submitNewTweet);
   
 
 });
