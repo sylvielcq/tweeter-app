@@ -15,6 +15,8 @@ html {
  */
 
 body {
+  display: flex;
+  flex-direction: column;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -25,5 +27,38 @@ body {
   width: 90%;
   margin: auto;
   text-align: justify;
+  padding-bottom: 30px;
 }
 
+
+/* Desktop and larger styles */
+@media only screen and (min-width: 1024px) {
+
+  body {
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px
+  }
+
+  nav {
+    background-color: #4056A1;
+  }
+
+  header.header-profile {
+    width: 40%;
+    height: 40vh;
+    float: left;
+    padding: 0px;
+    margin-top: 13rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  main.container {
+    width: 60%;
+    float: right;
+    margin-top: 13rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
