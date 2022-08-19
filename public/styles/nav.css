@@ -20,6 +20,8 @@ nav > span {
   margin-top: 0.3em;
 }
 
+/* (Default) '.active' class added when user is at the top of the page, or scrolling up */
+/* (cf. composer.js script file) */
 .nav-new-tweet.active {
   display: flex;
   flex-direction: column;
@@ -28,6 +30,7 @@ nav > span {
   opacity: 1;
 }
 
+/*  When user is scrolling down  */
 .nav-new-tweet {
   display: flex;
   flex-direction: column;

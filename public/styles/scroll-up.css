@@ -8,6 +8,7 @@
   right: 1em;
 }
 
+/* (Default) */
 #scroll-up-btn {
   background: #FF0000;
   width: 80px;
@@ -19,6 +20,8 @@
   transition: 0.5s all ease;
 }
 
+/* When user is scrolling down. */
+/* (cf. composer.js script file) */
 #scroll-up-btn.active {
   opacity: 1;
 }
