@@ -50,6 +50,7 @@ nav > span {
   background: none;
   border: none;
   animation: pulse 1s infinite ease-in-out alternate;
+  cursor: pointer;
 }
 
 .nav-new-tweet button:hover {
