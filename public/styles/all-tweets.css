@@ -1,68 +1,66 @@
 /* ==========================================================================
    ALL-TWEETS SECTION
    ========================================================================== */
-
-article.tweet {
-  border: 4px solid #72706b;
+/* ==========================================================================
+   SASS VARIABLES
+   ========================================================================== */
+/* Fonts */
+/* Font colors */
+/* Backgrounds */
+/* Buttons */
+/* Other colors */
+article {
+  border: 4px solid #1d3557;
+  border-radius: 20px;
   margin-bottom: 30px;
 }
-
-article.tweet:hover {
-  box-shadow: 6px 6px 0 0 #d5ccff;
-}
-
-article.tweet header {
+article header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
 }
-
-article.tweet header .user-photo-name {
+article header .user-photo-name {
   display: flex;
   align-items: center;
 }
-
-article.tweet header .user-handle {
+article header .user-handle {
   display: flex;
   align-items: center;
   font-weight: bold;
-  color: #c7c7c7;
+  color: #cedfe0;
 }
-
-article.tweet header img {
+article header img {
   max-width: 2em;
-  margin-right: 10px
+  margin-right: 10px;
 }
-
-.tweet-content {
+article .tweet-content {
   margin-left: 25px;
   margin-right: 25px;
   margin-top: 20px;
 }
-
-.separator {
-  border-bottom: 4px solid #72706b;
+article .separator {
+  border-bottom: 4px solid #1d3557;
   padding-top: 30px;
   margin-left: 10px;
   margin-right: 10px;
 }
-
-article.tweet footer {
+article footer {
   display: flex;
   justify-content: space-between;
   font-size: small;
   padding: 10px 20px 20px 20px;
 }
-
-.icons #flag:hover {
+article footer #flag:hover {
+  color: #FFCC66;
+}
+article footer #re-tweet:hover {
+  color: #FFCC66;
+}
+article footer #like:hover {
   color: #FFCC66;
 }
 
-.icons #re-tweet:hover {
-  color: #FFCC66;
-}
-
-.icons #like:hover {
-  color: #FFCC66;
+article:hover {
+  box-shadow: 6px 6px 0 0 #a8dadc;
 }

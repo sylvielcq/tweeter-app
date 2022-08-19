@@ -1,16 +1,23 @@
 /* ==========================================================================
    GLOBAL
    ========================================================================== */
-
+/* ==========================================================================
+   SASS VARIABLES
+   ========================================================================== */
+/* Fonts */
+/* Font colors */
+/* Backgrounds */
+/* Buttons */
+/* Other colors */
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -18,38 +25,36 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   display: flex;
   flex-direction: column;
-  color: #545149;
-  background-color: #f4f1ec;
+  color: #1d3557;
+  background-color: #f1faee;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
-
-.container {
+body .container {
   width: 90%;
   margin: auto;
   text-align: justify;
   padding-bottom: 30px;
 }
-
+body .bold {
+  font-weight: bold;
+}
 
 /* Desktop and larger styles */
 @media only screen and (min-width: 1024px) {
-
   body {
     flex-direction: row;
     justify-content: space-around;
-    font-size: 20px
+    font-size: 20px;
   }
-
   nav {
-    background-color: #4056A1;
+    background-color: #1d3557;
   }
-
   header.header-profile {
+    border-radius: 20px;
     width: 40%;
     height: 40vh;
     float: left;
@@ -58,7 +63,6 @@ body {
     margin-left: 3rem;
     margin-right: 3rem;
   }
-
   main.container {
     width: 60%;
     float: right;

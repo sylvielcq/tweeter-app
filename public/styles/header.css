@@ -1,31 +1,32 @@
 /* ==========================================================================
    HEADER
    ========================================================================== */
-
+/* ==========================================================================
+   SASS VARIABLES
+   ========================================================================== */
+/* Fonts */
+/* Font colors */
+/* Backgrounds */
+/* Buttons */
+/* Other colors */
 .header-profile {
-  padding-top: 90px;
-  height: 490px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #d0e1ed;
-  background-image: url("https://www.transparenttextures.com/patterns/pineapple-cut.png");
+  flex-direction: column;
+  padding-top: 90px;
+  height: 490px;
+  border-radius: 0;
+  background-color: #a8dadc;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
-
 .header-profile div {
   text-align: center;
 }
-
 .header-profile div img {
-  max-width: 70%;
+  max-width: 40%;
+  border-radius: 50%;
 }
-
-.header-name {
-  font-family: 'Source Sans Pro', sans-serif;
+.header-profile div .header-name {
+  font-family: "Source Sans Pro", sans-serif;
 }
-
-.bold {
-  font-weight: bold;
-}
-

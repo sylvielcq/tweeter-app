@@ -1,48 +1,52 @@
 /* ==========================================================================
    NEW TWEET SECTION
    ========================================================================== */
-
+/* ==========================================================================
+   SASS VARIABLES
+   ========================================================================== */
+/* Fonts */
+/* Font colors */
+/* Backgrounds */
+/* Buttons */
+/* Other colors */
 section.new-tweet {
   margin-top: 20px;
   margin-bottom: 50px;
+  /* Only visible when tweet input is empty or too long */
+  /* (cf. submitnewtweet() function in client.js script file) */
 }
-
-
-.label {
+section.new-tweet .label {
   font-weight: bold;
   text-align: left;
 }
-
-#tweet-text {
+section.new-tweet #tweet-text {
   width: 100%;
   background: transparent;
-  border-top-width: 0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 4px;
+  border: 0px;
   font-size: 90%;
   padding-bottom: 0px;
   padding-top: 5px;
 }
-
-/* Only visible when tweet input is empty or too long */
-/* (cf. submitnewtweet() function in client.js script file) */
-#error {
+section.new-tweet .separator {
+  border-bottom: 4px solid #1d3557;
+}
+section.new-tweet #error {
   font-size: medium;
   font-weight: bold;
-  color: #FF0000;
+  color: #e63946;
 }
-
-.form-footer {
+section.new-tweet .form-footer {
   display: flex;
   justify-content: space-between;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", sans-serif;
   margin-top: 10px;
   margin-bottom: 10px;
+  /* When tweet is too long. */
+  /* '.invalid' class added by charCounter function in composer-char-counter.js script file */
 }
-
-.form-footer > button {
-  background-color: #4152a0;
+section.new-tweet .form-footer button {
+  background-color: #1d3557;
+  border-radius: 20px;
   color: #FFFFFF;
   padding-left: 12px;
   padding-right: 12px;
@@ -54,15 +58,10 @@ section.new-tweet {
   border-right-width: 0px;
   cursor: pointer;
 }
-
-/* When tweet is too long. */
-/* '.invalid' class added by charCounter function in composer-char-counter.js script file */
-.counter.invalid {
-  color: #FF0000;
+section.new-tweet .form-footer .counter.invalid {
+  color: #e63946;
 }
-
-.counter {
+section.new-tweet .form-footer .counter {
   margin-right: 10px;
   margin-left: 10px;
 }
-

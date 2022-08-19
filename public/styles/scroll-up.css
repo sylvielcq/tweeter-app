@@ -1,16 +1,24 @@
 /* ==========================================================================
    SCROLL UP BUTTON
    ========================================================================== */
-
+/* ==========================================================================
+   SASS VARIABLES
+   ========================================================================== */
+/* Fonts */
+/* Font colors */
+/* Backgrounds */
+/* Buttons */
+/* Other colors */
 .scroll-up {
   position: fixed;
   bottom: 1em;
   right: 1em;
+  /* (Default) */
+  /* When user is scrolling down. */
+  /* (cf. composer.js script file) */
 }
-
-/* (Default) */
-#scroll-up-btn {
-  background: #FF0000;
+.scroll-up #scroll-up-btn {
+  background: #e63946;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -20,13 +28,9 @@
   transition: 0.5s all ease;
   cursor: pointer;
 }
-
-/* When user is scrolling down. */
-/* (cf. composer.js script file) */
-#scroll-up-btn.active {
+.scroll-up #scroll-up-btn.active {
   opacity: 1;
 }
-
-#scroll-up-btn:hover {
-  background-color: #fdc083;
+.scroll-up #scroll-up-btn:hover {
+  background-color: #a8dadc;
 }

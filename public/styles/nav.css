@@ -1,37 +1,41 @@
 /* ==========================================================================
    NAVIGATION BAR
    ========================================================================== */
-
+/* ==========================================================================
+   SASS VARIABLES
+   ========================================================================== */
+/* Fonts */
+/* Font colors */
+/* Backgrounds */
+/* Buttons */
+/* Other colors */
 nav {
-    display: flex;
-    height: 120px;
-    width: 100vw;
-    background-color: none;
-    color: #FFFFFF;
-    padding: 1.5em;
-    justify-content: space-between;
-    z-index: 1;
-    position: fixed;
+  display: flex;
+  height: 120px;
+  width: 100vw;
+  background-color: none;
+  color: #FFFFFF;
+  padding: 1.5em;
+  justify-content: space-between;
+  z-index: 1;
+  position: fixed;
+  /* (Default) '.active' class added when user is at the top of the page, or scrolling up */
+  /* (cf. composer.js script file) */
+  /*  When user is scrolling down  */
 }
-
-nav > span {
-  font-family: 'Bungee', cursive;
+nav .tweeter {
+  font-family: "Bungee", sans-serif;
   font-size: 2em;
   margin-top: 0.3em;
 }
-
-/* (Default) '.active' class added when user is at the top of the page, or scrolling up */
-/* (cf. composer.js script file) */
-.nav-new-tweet.active {
+nav .nav-new-tweet.active {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 0.8em;
   opacity: 1;
 }
-
-/*  When user is scrolling down  */
-.nav-new-tweet {
+nav .nav-new-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,25 +43,22 @@ nav > span {
   transition: 0.5s all ease;
   opacity: 0;
 }
-
-.bold {
-  font-weight: bold;
-}
-
-.nav-new-tweet button {
-  color: #c50101;
+nav .nav-new-tweet button {
+  color: #e63946;
   padding-top: 2px;
   background: none;
   border: none;
   animation: pulse 1s infinite ease-in-out alternate;
   cursor: pointer;
 }
-
-.nav-new-tweet button:hover {
-  color: #FFFFFF
+nav .nav-new-tweet button:hover {
+  color: #FFFFFF;
 }
-
 @keyframes pulse {
-  from { transform: scale(0.8); }
-  to { transform: scale(1.2); }
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
