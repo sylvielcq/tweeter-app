@@ -43,10 +43,10 @@ nav > span {
   padding-top: 2px;
   background: none;
   border: none;
+  animation: pulse 1s infinite ease-in-out alternate;
 }
 
 .nav-new-tweet button:hover {
-  animation: pulse 1s infinite ease-in-out alternate;
   color: #FFFFFF
 }
 
