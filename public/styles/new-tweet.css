@@ -25,6 +25,8 @@ section.new-tweet {
   padding-top: 5px;
 }
 
+/* Only visible when tweet input is empty or too long */
+/* (cf. submitnewtweet() function in client.js script file) */
 #error {
   font-size: medium;
   font-weight: bold;
@@ -52,6 +54,8 @@ section.new-tweet {
   border-right-width: 0px;
 }
 
+/* When tweet is too long. */
+/* '.invalid' class added by charCounter function in composer-char-counter.js script file */
 .counter.invalid {
   color: #FF0000;
 }
