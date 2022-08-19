@@ -6,7 +6,7 @@ $(document).ready(() => {
     
     let currentScrollPosition = $(this).scrollTop();
     
-    if (currentScrollPosition > lastScrollPosition){
+    if (currentScrollPosition > lastScrollPosition) {
       $('#scroll-up-btn').addClass('active');
       $('.nav-new-tweet').removeClass('active');
     } else {
