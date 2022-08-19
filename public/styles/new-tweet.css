@@ -52,6 +52,7 @@ section.new-tweet {
   border-left-width: 0px;
   border-bottom-width: 0px;
   border-right-width: 0px;
+  cursor: pointer;
 }
 
 /* When tweet is too long. */
