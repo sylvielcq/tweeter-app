@@ -4,6 +4,8 @@ Tweeter is a simplified, single-page Twitter clone, built using HTML, CSS, JS, j
 
 This is my third project at Lighthouse Labs after [Lotide](https://github.com/sylvielcq/lotide) and [TinyApp](https://github.com/sylvielcq/tinyapp).
 
+The back-end code was provided by Lighthouse Labs, as our goal was to focus on building the front-end / client-side.
+
 ## Final Product
 
 Homepage
