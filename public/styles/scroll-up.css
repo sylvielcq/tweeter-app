@@ -18,6 +18,7 @@
   color: #FFFFFF;
   opacity: 0;
   transition: 0.5s all ease;
+  cursor: pointer;
 }
 
 /* When user is scrolling down. */
