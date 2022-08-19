@@ -1,7 +1,12 @@
+/* -------------------------------------------------------------------------- */
+/*                   CHARACTER COUNTER ON NEW TWEET FORM                      */
+/* -------------------------------------------------------------------------- */
+
 $(document).ready(() => {
 
-  // Function that updates the characters counter on the New Tweet form.
+  // Updates the characters counter on the New Tweet form, as the user types.
   // Takes in no argument. Returns a number.
+
   const charCounter = function() {
 
     const maxChars = 140;
@@ -18,6 +23,9 @@ $(document).ready(() => {
     }
   };
 
+
+  // Event listener on the textarea
+  
   $('#tweet-text').on('input', charCounter);
 
 });
