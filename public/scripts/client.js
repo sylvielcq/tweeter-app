@@ -14,13 +14,13 @@ $(document).ready(() => {
 
 
     if ($(this).find('#tweet-text').val() === '') {     // If the tweet is empty
-      $('#error').html(`${errorIcon} Content required.`);
+      $('#error').html(`${errorIcon} Content required`);
       $('#error').slideDown();
       return;
     }
 
     if ($(this).find('.invalid')[0]) {                  // If the tweet is too long (= ".invalid" class applied on tweets over 140 chars by our chatCounter function)
-      $('#error').html(`${errorIcon} 140 characters maximum.`);
+      $('#error').html(`${errorIcon} 140 characters maximum`);
       $('#error').slideDown();
       return;
     }
