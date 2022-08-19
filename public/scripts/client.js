@@ -1,16 +1,24 @@
+/* -------------------------------------------------------------------------- */
+/*                COMPOSE A NEW TWEET & DISPLAY PAST TWEETS                   */
+/* -------------------------------------------------------------------------- */
+
+
 $(document).ready(() => {
 
-  // Function called when a new tweet is submitted.
-  // The user input is checked, then - if valid - serialized into a query string, and sent to the /tweets server page.
+  /* -------------------------------------------------------------------------- */
+
+  /* SUBMIT NEW TWEET FUNCTION
+     Called when a new tweet is submitted (passed in the event listener, see bottom of the file).
+     The user input is checked, then - if valid - serialized into a query string, and sent to the /tweets server page.
+  */
+
   const submitNewTweet = function(event) {
 
     event.preventDefault();
 
-    // Exclamation icon for error message
-    const errorIcon = `<i class="fa-solid fa-triangle-exclamation"></i>`;
+    const errorIcon = `<i class="fa-solid fa-triangle-exclamation"></i>`;     // Exclamation icon for error messages
     
-    // Hides any prexisting error messages
-    $('#error').text('');
+    $('#error').text('');                               // Hides any prexisting error messages
 
 
     if ($(this).find('#tweet-text').val() === '') {     // If the tweet is empty
@@ -19,7 +27,7 @@ $(document).ready(() => {
       return;
     }
 
-    if ($(this).find('.invalid')[0]) {                  // If the tweet is too long (= ".invalid" class applied on tweets over 140 chars by our chatCounter function)
+    if ($(this).find('.invalid')[0]) {                  // If the tweet is too long (= ".invalid" class applied on tweets over 140 chars by our chatCounter function, see composer-char-counter.js file)
       $('#error').html(`${errorIcon} 140 characters maximum`);
       $('#error').slideDown();
       return;
@@ -41,9 +49,13 @@ $(document).ready(() => {
   };
 
 
-  // Function that fetches tweets from the http://localhost:8080/tweets page,
-  // and receives an array of tweets as JSON,
-  // which is then passed to the renderTweets function.
+  /* -------------------------------------------------------------------------- */
+
+  /* LOAD TWEETS FUNCTION
+     Fetches tweets from /tweets, and receives an array of tweets as JSON, 
+     which is then passed to the renderTweets function.
+  */
+
   const loadTweets = function() {
 
     $.ajax({
@@ -59,34 +71,52 @@ $(document).ready(() => {
   };
 
 
-  // Function that prepends tweets to the .all-tweets section.
-  // Takes in an array of tweet objects.
+
+  /* -------------------------------------------------------------------------- */
+
+  /* RENDER TWEETS FUNCTION
+     Prepends tweets to the .all-tweets section.
+     Takes in an array of tweet objects.
+  */
+
   const renderTweets = function(arr) {
 
     const $allTweets = $('.all-tweets');
-    $allTweets.empty();         // Empties the .all-tweets section each time the function is called, to avoid duplicates.
+    $allTweets.empty();                    // Empties the .all-tweets section each time the function is called, to avoid duplicates.
 
     arr.forEach((obj) => {
       $allTweets.prepend(createTweetElement(obj));
     });
   };
 
-  // Function that escapes text in order to prevent an XSS attack.
-  // Takes in a string. Returns an escaped string.
+
+  /* -------------------------------------------------------------------------- */
+
+  /* ESCAPE FUNCTION
+     Escapes text in order to prevent an XSS attack.
+     Takes in a string. Returns an escaped string.
+  */  
+
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
-  // Function that creates a tweet.
-  // Takes in a tweet object. Returns a tweet <article> element.
+
+  /* -------------------------------------------------------------------------- */
+
+  /* CREATE TWEET ELEMENT FUNCTION
+     Creates an html article element that contains a new tweet.
+     Takes in a tweet object. Returns a tweet <article> element.
+  */  
+
   const createTweetElement = function(obj) {
 
     const avatar = obj.user.avatars;
     const name = obj.user.name;
     const handle = obj.user.handle;
-    const content = obj.content.text;
+    const content = escape(obj.content.text);
     const creationDate = timeago.format(obj.created_at);
 
     const $tweet = `
@@ -100,7 +130,7 @@ $(document).ready(() => {
             <span>${handle}</span>
           </div>
         </header>
-        <p class="tweet-content">${escape(content)}</p>
+        <p class="tweet-content">${content}</p>
         <div class="separator"></div>
         <footer>
           <span>${creationDate}</span>
@@ -116,11 +146,14 @@ $(document).ready(() => {
     return $tweet;
   };
 
+
+  /* ------------------------------ FUNCTION CALLS -------------------------------------- */
+
+
   // Loads tweets history on page load.
   loadTweets();
 
   // Event Listener on the New Tweet submit button.
   $('form').submit(submitNewTweet);
-  
 
 });
