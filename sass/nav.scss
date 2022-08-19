@@ -1,0 +1,64 @@
+/* ==========================================================================
+   NAVIGATION BAR
+   ========================================================================== */
+
+
+@import '_variables';
+
+nav {
+  display: flex;
+  height: 120px;
+  width: 100vw;
+  background-color: none;
+  color: $secondary-color;
+  padding: 1.5em;
+  justify-content: space-between;
+  z-index: 1;
+  position: fixed;
+
+  .tweeter {
+    font-family: $secondary-font;
+    font-size: 2em;
+    margin-top: 0.3em;
+  }
+
+  /* (Default) '.active' class added when user is at the top of the page, or scrolling up */
+  /* (cf. composer.js script file) */
+  .nav-new-tweet.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.8em;
+    opacity: 1;
+  }
+
+  /*  When user is scrolling down  */
+  .nav-new-tweet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.8em;
+    transition: 0.5s all ease;
+    opacity: 0;
+
+    button {
+      color: $nav-btn-color;
+      padding-top: 2px;
+      background: none;
+      border: none;
+      animation: pulse 1s infinite ease-in-out alternate;
+      cursor: pointer;
+    }
+
+    button:hover {
+      color: $secondary-color
+    }
+
+    @keyframes pulse {
+      from { transform: scale(0.8); }
+      to { transform: scale(1.2); }
+    }
+  }
+}
+
+

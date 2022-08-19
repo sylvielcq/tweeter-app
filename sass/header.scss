@@ -1,0 +1,38 @@
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+
+@import '_variables';
+
+@mixin vertical-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-profile {
+  @include vertical-align;
+  flex-direction: column;
+  padding-top: 90px;
+  height: 490px;
+  border-radius: 0;
+  background-color: $header-background-color;
+  background-image: $background-image;
+
+  div {
+    text-align: center;
+
+    img {
+      max-width: 40%;
+      border-radius: 50%;
+    }
+
+    .header-name {
+      font-family: $primary-font;
+    }
+  }
+}
+
+
+

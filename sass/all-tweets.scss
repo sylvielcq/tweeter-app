@@ -1,0 +1,73 @@
+/* ==========================================================================
+   ALL-TWEETS SECTION
+   ========================================================================== */
+
+
+@import '_variables';
+
+
+article {
+  border: 4px solid $border-color;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+
+    .user-photo-name {
+      display: flex;
+      align-items: center;
+    }
+
+    .user-handle {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: $handle-color;
+    }
+
+    img {
+      max-width: 2em;
+      margin-right: 10px
+    }
+  }
+
+  .tweet-content {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 20px;
+  }
+  
+  .separator {
+    border-bottom: 4px solid $separator-color;
+    padding-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    padding: 10px 20px 20px 20px;
+
+    #flag:hover {
+      color: $icon-hover-color;
+    }
+    
+    #re-tweet:hover {
+      color: $icon-hover-color;
+    }
+    
+    #like:hover {
+      color: $icon-hover-color;
+    }
+  }
+}
+
+article:hover {
+  box-shadow: 6px 6px 0 0 $box-shadow-color;
+}

@@ -1,0 +1,71 @@
+/* ==========================================================================
+   NEW TWEET SECTION
+   ========================================================================== */
+
+
+@import '_variables';
+
+
+section.new-tweet {
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+  .label {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  #tweet-text {
+    width: 100%;
+    background: transparent;
+    border: 0px;
+    font-size: 90%;
+    padding-bottom: 0px;
+    padding-top: 5px;
+  }
+
+  .separator {
+    border-bottom: 4px solid $separator-color;
+  }
+  /* Only visible when tweet input is empty or too long */
+  /* (cf. submitnewtweet() function in client.js script file) */
+  #error {
+    font-size: medium;
+    font-weight: bold;
+    color: $error-color;
+  }
+
+  .form-footer {
+    display: flex;
+    justify-content: space-between;
+    font-family: $secondary-font;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    button {
+      background-color: $form-btn-color;
+      border-radius: 20px;
+      color: $secondary-color;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      border-top-width: 0px;
+      border-left-width: 0px;
+      border-bottom-width: 0px;
+      border-right-width: 0px;
+      cursor: pointer;
+    }
+
+    /* When tweet is too long. */
+    /* '.invalid' class added by charCounter function in composer-char-counter.js script file */
+    .counter.invalid {
+      color: $error-color;
+    }
+
+    .counter {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+}

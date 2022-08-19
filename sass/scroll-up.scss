@@ -1,0 +1,40 @@
+/* ==========================================================================
+   SCROLL UP BUTTON
+   ========================================================================== */
+
+
+@import '_variables';
+
+.scroll-up {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+
+  /* (Default) */
+  #scroll-up-btn {
+    background: $scroll-btn-color;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border-color: transparent;
+    color: $secondary-color;
+    opacity: 0;
+    transition: 0.5s all ease;
+    cursor: pointer;
+  }
+
+  /* When user is scrolling down. */
+  /* (cf. composer.js script file) */
+  #scroll-up-btn.active {
+    opacity: 1;
+  }
+
+  #scroll-up-btn:hover {
+    background-color: $scroll-btn-hover-color;
+  }
+}
+
+
+
+
+

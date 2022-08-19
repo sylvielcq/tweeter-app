@@ -1,0 +1,82 @@
+/* ==========================================================================
+   GLOBAL
+   ========================================================================== */
+
+
+@import '_variables';
+
+
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: $primary-color;
+  background-color: $primary-background-color;
+  font-size: 24px;
+  font-family: $primary-font;
+
+  .container {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    padding-bottom: 30px;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+  
+}
+
+
+
+
+/* Desktop and larger styles */
+@media only screen and (min-width: 1024px) {
+
+  body {
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px
+  }
+
+  nav {
+    background-color: $nav-background-color;
+  }
+
+  header.header-profile {
+    border-radius: 20px;
+    width: 40%;
+    height: 40vh;
+    float: left;
+    padding: 0px;
+    margin-top: 13rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  main.container {
+    width: 60%;
+    float: right;
+    margin-top: 13rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+}
