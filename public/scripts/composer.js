@@ -20,7 +20,7 @@ $(document).ready(() => {
 
   $('#scroll-up-btn').click(function() {
 
-    window.scrollTo(100,100);
+    window.scrollTo(0,0);
     $('#tweet-text').focus(); // Cursor in textarea
 
   });
