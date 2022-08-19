@@ -105,9 +105,9 @@ $(document).ready(() => {
         <footer>
           <span>${creationDate}</span>
           <div class="icons">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
+            <i id="flag" class="fa-solid fa-flag"></i>
+            <i id="re-tweet" class="fa-solid fa-retweet"></i>
+            <i id="like" class="fa-solid fa-heart"></i>
           </div>
         </footer>
       </article>

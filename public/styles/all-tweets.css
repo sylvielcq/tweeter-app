@@ -51,14 +51,14 @@ article.tweet footer {
   padding: 10px 20px 20px 20px;
 }
 
-.icons .fa-solid.fa-flag:hover {
+.icons #flag:hover {
   color: #FFCC66;
 }
 
-.icons .fa-solid.fa-retweet:hover {
+.icons #re-tweet:hover {
   color: #FFCC66;
 }
 
-.icons .fa-solid.fa-heart:hover {
+.icons #like:hover {
   color: #FFCC66;
 }
