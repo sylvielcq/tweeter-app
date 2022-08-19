@@ -58,6 +58,10 @@ body {
 
   nav {
     background-color: $nav-background-color;
+
+    .tweeter {
+      text-shadow: 2px 2px 0px $text-shadow-color;
+    }
   }
 
   header.header-profile {
@@ -78,5 +82,4 @@ body {
     margin-left: 3rem;
     margin-right: 3rem;
   }
-
 }

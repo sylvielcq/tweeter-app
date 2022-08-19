@@ -5,6 +5,7 @@
 
 @import '_variables';
 
+
 nav {
   display: flex;
   height: 120px;
@@ -20,7 +21,6 @@ nav {
     font-family: $secondary-font;
     font-size: 2em;
     margin-top: 0.3em;
-    text-shadow: 2px 2px 8px #457b9d;
   }
 
   /* (Default) '.active' class added when user is at the top of the page, or scrolling up */
@@ -32,7 +32,6 @@ nav {
     align-items: center;
     margin-top: 0.8em;
     padding-top: 10px;
-    text-shadow: 2px 2px 8px #457b9d;
   }
 
   /*  When user is scrolling down  */
@@ -47,7 +46,6 @@ nav {
 
     button {
       color: $nav-btn-color;
-      text-shadow: 1px 1px 6px #457b9d;
       padding-top: 2px;
       background: none;
       border: none;
@@ -65,5 +63,3 @@ nav {
     }
   }
 }
-
-
