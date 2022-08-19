@@ -5,4 +5,4 @@ $(document).ready(() => {
     $('#tweet-text').focus(); // Pointer ready to write a tweet
   });
 
-})
+});
