@@ -9,6 +9,14 @@
   background-image: url("https://www.transparenttextures.com/patterns/pineapple-cut.png");
 }
 
+.header-profile div {
+  text-align: center;
+}
+
+.header-profile div img {
+  max-width: 70%;
+}
+
 .header-name {
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -16,3 +24,4 @@
 .bold {
   font-weight: bold;
 }
+
